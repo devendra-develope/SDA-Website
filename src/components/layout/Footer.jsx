@@ -32,7 +32,7 @@ function Footer() {
             TOP GRID
         ==================================== */}
 
-        <div className="footer-top-grid-wrapper grid grid-cols-1 xl:grid-cols-[1.1fr_0.7fr_0.7fr] gap-[70px] relative z-10">
+        <div className="footer-top-grid-wrapper grid grid-cols-1 xl:grid-cols-[1.1fr_0.7fr_0.7fr] gap-[70px] relative z-10 mb-10">
 
           {/* ====================================
               LEFT SIDE
