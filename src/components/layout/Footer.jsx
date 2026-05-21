@@ -248,7 +248,7 @@ function Footer() {
             SOCIAL LINKS
         ==================================== */}
 
-        <div className="footer-social-links-wrapper flex flex-wrap justify-center xl:justify-end items-center gap-6 md:gap-10 pt-[70px] pb-[60px]">
+        {/* <div className="footer-social-links-wrapper flex flex-wrap justify-center xl:justify-end items-center gap-6 md:gap-10 pt-[70px] pb-[60px]">
 
           <a
             href="#"
@@ -292,7 +292,7 @@ function Footer() {
 
           </a>
 
-        </div>
+        </div> */}
 
         {/* ====================================
             LOCATION AREA
