@@ -1,0 +1,485 @@
+/* ====================================
+   TAILWIND
+==================================== */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* ====================================
+   GOOGLE FONT
+==================================== */
+
+
+
+/* ====================================
+   ROOT VARIABLES
+==================================== */
+
+:root {
+
+  --primary-color: #ab0418;
+  --secondary-color: #17181a;
+
+  --white-color: #ffffff;
+  --light-bg: #f5f3ee;
+  --border-color: #d9d9d9;
+
+  --font-family-primary: "Outfit", sans-serif;
+
+}
+
+
+/* ====================================
+   GLOBAL RESET
+==================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+/* ====================================
+   BODY
+==================================== */
+
+body {
+
+  font-family: var(--font-family-primary);
+  background-color: var(--light-bg);
+  color: var(--secondary-color);
+  font-family: "Unbounded", sans-serif;
+  overflow-x: hidden;
+
+}
+
+/* ====================================
+   GOOGLE FONT IMPORT
+==================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@200;300;400;500;600;700;800&display=swap');
+
+
+/* ====================================
+   COMMON ELEMENTS
+==================================== */
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+
+/* ====================================
+   CUSTOM CLASSES
+==================================== */
+
+.primary-color {
+  color: var(--primary-color);
+}
+
+.secondary-color {
+  color: var(--secondary-color);
+}
+
+.primary-bg {
+  background-color: var(--primary-color);
+}
+
+.secondary-bg {
+  background-color: var(--secondary-color);
+}
+
+/* ====================================
+   HERO HEADING
+==================================== */
+
+.hero-heading-wrapper {
+
+  position: relative;
+
+  z-index: 20;
+
+  margin-bottom: -90px;
+
+}
+
+.hero-main-heading {
+
+  position: relative;
+
+  z-index: 20;
+
+}
+
+/* ====================================
+   HERO BOTTOM
+==================================== */
+
+.hero-bottom-wrapper {
+
+  position: relative;
+
+  display: grid;
+
+  grid-template-columns: 1fr 420px;
+
+  gap: 60px;
+
+  align-items: center;
+
+}
+
+/* ====================================
+   IMAGE
+==================================== */
+
+.hero-image-wrapper {
+
+  position: relative;
+
+}
+
+.hero-image-shape {
+
+  position: relative;
+
+  overflow: hidden;
+
+  height: 380px;
+
+  border-radius: 220px;
+
+}
+
+.hero-main-image {
+
+  width: 100%;
+
+  height: 100%;
+
+  object-fit: cover;
+
+  display: block;
+
+}
+
+.hero-image-left-border {
+
+  position: absolute;
+
+  left: 0;
+
+  top: 0;
+
+  width: 8px;
+
+  height: 100%;
+
+  background: #ab0418;
+
+  border-radius:
+    220px 0 0 220px /
+    120px 0 0 120px;
+
+  z-index: 5;
+
+}
+
+/* ====================================
+   RIGHT CONTENT
+==================================== */
+
+.hero-right-content {
+
+  padding-top: 120px;
+
+}
+
+.hero-description {
+
+  font-size: 24px;
+
+  line-height: 1.8;
+
+  color: #4d4d4d;
+
+  margin-bottom: 40px;
+
+}
+
+.hero-description-bold {
+
+  color: #17181a;
+
+  font-weight: 700;
+
+}
+
+.hero-tags-wrapper {
+
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 15px;
+
+  margin-bottom: 50px;
+
+}
+
+.hero-tag {
+
+  padding: 14px 28px;
+
+  border-radius: 999px;
+
+  border: 1px solid #d9d9d9;
+
+  background: #fff;
+
+  font-size: 17px;
+
+  font-weight: 600;
+
+}
+
+.hero-explore-button {
+
+  width: 160px;
+
+  height: 160px;
+
+  border-radius: 50%;
+
+  background: #17181a;
+
+  color: #fff;
+
+  border: none;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 12px;
+
+  cursor: pointer;
+
+  transition: 0.4s;
+
+}
+
+.hero-explore-button:hover {
+
+  background: #ab0418;
+
+  transform: scale(1.05);
+
+}
+
+.hero-explore-icon {
+
+  font-size: 26px;
+
+  transform: rotate(45deg);
+
+}
+
+.hero-explore-text {
+
+  font-size: 24px;
+
+  font-weight: 700;
+
+  line-height: 1.2;
+
+  text-align: center;
+
+}
+
+/* ====================================
+   RESPONSIVE
+==================================== */
+
+@media (max-width: 1200px) {
+
+  .hero-bottom-wrapper {
+
+    grid-template-columns: 1fr;
+
+  }
+
+  .hero-right-content {
+
+    padding-top: 0;
+
+  }
+
+}
+
+@media (max-width: 991px) {
+
+  .hero-heading-wrapper {
+
+    margin-bottom: -20px;
+
+  }
+
+  .hero-image-shape {
+
+    height: 420px;
+
+    border-radius: 120px;
+
+  }
+
+}
+
+@media (max-width: 767px) {
+
+  .hero-heading-wrapper {
+
+    margin-bottom: 40px;
+
+  }
+
+  .hero-image-shape {
+
+    height: 300px;
+
+    border-radius: 60px;
+
+  }
+
+  .hero-description {
+
+    font-size: 18px;
+
+  }
+
+}
+
+
+.client-logo-slider-wrapper {
+
+  width: 100%;
+
+  overflow: hidden;
+
+  position: relative;
+
+}
+
+.client-logo-slider-track {
+
+  display: flex;
+
+  align-items: center;
+
+  width: max-content;
+
+  animation: clientLogoMarquee 28s linear infinite;
+
+}
+
+.client-logo-slider-wrapper:hover .client-logo-slider-track {
+
+  animation-play-state: paused;
+
+}
+
+.client-logo-slider-item {
+
+  width: 240px;
+
+  height: 120px;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  transition: all 0.4s ease;
+
+}
+
+.client-logo-slider-image {
+
+  width: 130px;
+
+  height: 55px;
+
+  object-fit: contain;
+
+  opacity: 0.6;
+
+  filter: grayscale(100%);
+
+  transition: all 0.4s ease;
+
+}
+
+.client-logo-slider-item:hover .client-logo-slider-image {
+
+  opacity: 1;
+
+  filter: grayscale(0%);
+
+  transform: scale(1.08);
+
+}
+
+@keyframes clientLogoMarquee {
+
+  from {
+
+    transform: translateX(0);
+
+  }
+
+  to {
+
+    transform: translateX(-50%);
+
+  }
+
+}
+
+@media (max-width: 767px) {
+
+  .client-logo-slider-item {
+
+    width: 180px;
+
+    height: 90px;
+
+  }
+
+  .client-logo-slider-image {
+
+    width: 100px;
+
+    height: 40px;
+
+  }
+
+}
