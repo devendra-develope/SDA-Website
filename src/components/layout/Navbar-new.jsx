@@ -8,6 +8,7 @@ import {
 
 import redLogo from '../../assets/spicetree_red_logo.webp'
 import whiteLogo from '../../assets/spicetree_white_logo.webp'
+// Import Link
 
 import { Link } from 'react-router-dom'
 
@@ -110,15 +111,18 @@ function Navbar() {
           ==================================== */}
 
           {!menuOpen && (
-             <Link to="/">
+
+<Link to="/">
+
             <img
               src={redLogo}
               alt="Logo"
               className="main-navbar-logo w-[150px] md:w-[190px] object-contain"
             />
-            </Link>
+              </Link>
 
           )}
+        
 
           {menuOpen && (
 
@@ -142,7 +146,7 @@ function Navbar() {
               <span
                 className={`absolute w-[2px] h-[34px] transition-all duration-500 ease-in-out ${menuOpen
                   ? 'rotate-45 bg-white'
-                  : 'left-[10px] bg-[#ab0418]'
+                  : 'left-[10px] bg-[#b1281e]'
                   }`}
               ></span>
 
@@ -151,7 +155,7 @@ function Navbar() {
               <span
                 className={`absolute w-[2px] h-[34px] transition-all duration-500 ease-in-out ${menuOpen
                   ? 'opacity-0'
-                  : 'bg-[#ab0418]'
+                  : 'bg-[#b1281e]'
                   }`}
               ></span>
 
@@ -160,7 +164,7 @@ function Navbar() {
               <span
                 className={`absolute w-[2px] h-[34px] transition-all duration-500 ease-in-out ${menuOpen
                   ? '-rotate-45 bg-white'
-                  : 'right-[10px] bg-[#ab0418]'
+                  : 'right-[10px] bg-[#b1281e]'
                   }`}
               ></span>
 
@@ -221,7 +225,7 @@ function Navbar() {
         ==================================== */}
 
         <div
-          className={`main-menu-right-column absolute right-0 top-0 w-full lg:w-1/2 h-full bg-[#ab0418] transition-all duration-700 ease-in-out delay-100 overflow-y-auto ${menuOpen
+          className={`main-menu-right-column absolute right-0 top-0 w-full lg:w-1/2 h-full bg-[#b1281e] transition-all duration-700 ease-in-out delay-100 overflow-y-auto ${menuOpen
             ? 'translate-y-0'
             : 'translate-y-full'
             }`}
@@ -231,10 +235,11 @@ function Navbar() {
               TOP BAR
           ==================================== */}
 
-          <div className="main-menu-topbar flex items-center justify-between px-5 md:px-10 xl:px-16 py-7 sticky top-0 bg-[#ab0418] z-50">
+          <div className="main-menu-topbar flex items-center justify-between px-5 md:px-10 xl:px-16 py-7 sticky top-0 bg-[#b1281e] z-50">
 
             {/* WHITE LOGO */}
-             <Link to="/">
+            <Link to="/">
+
             <img
               src={whiteLogo}
               alt="White Logo"
@@ -267,192 +272,181 @@ function Navbar() {
 
           <div className="main-menu-list-wrapper px-5 md:px-10 xl:px-16 pt-10 pb-20">
 
-       <ul className="main-menu-list flex flex-col gap-7">
 
-  {/* ABOUT */}
+            <ul className="main-menu-list flex flex-col gap-7">
 
-  <li className="main-menu-list-item list-none">
+              {/* ABOUT */}
 
-    <Link
-      to="/about-us"
-      className="main-menu-link text-white text-[20px] md:text-[26px] xl:text-[32px] font-bold hover:translate-x-3 transition-all duration-300 inline-block"
-    >
-      ABOUT
-    </Link>
+              <li className="main-menu-list-item list-none">
 
-  </li>
+                <Link
+                  to="/about-us"
+                  className="main-menu-link text-white text-[20px] md:text-[26px] xl:text-[32px] font-bold hover:translate-x-3 transition-all duration-300 inline-block"
+                >
+                  ABOUT
+                </Link>
 
-  {/* SERVICES */}
+              </li>
 
-  <li className="main-menu-list-item list-none">
+              {/* SERVICES */}
 
-    <button
-      onClick={() => setServicesDropdown(!servicesDropdown)}
-      className="main-menu-dropdown-button flex items-center gap-4"
-    >
+              <li className="main-menu-list-item list-none">
 
-      <span className="main-menu-link text-white text-[20px] md:text-[26px] xl:text-[32px] font-bold">
+                <button
+                  onClick={() =>
+                    setServicesDropdown(!servicesDropdown)
+                  }
+                  className="main-menu-dropdown-button flex items-center gap-4"
+                >
 
-        SERVICES
+                  <span className="main-menu-link text-white text-[20px] md:text-[26px] xl:text-[32px] font-bold">
 
-      </span>
+                    SERVICES
 
-      <FaAngleDown
-        className={`text-white transition-all duration-300 ${
-          servicesDropdown ? 'rotate-180' : ''
-        }`}
-      />
+                  </span>
 
-    </button>
+                </button>
 
-    {/* DROPDOWN */}
+                {/* DROPDOWN */}
 
-    <ul
-      className={`main-menu-dropdown-list overflow-hidden transition-all duration-500 ${
-        servicesDropdown
-          ? 'max-h-[400px] mt-5'
-          : 'max-h-0'
-      }`}
-    >
+                <ul
+                  className={`main-menu-dropdown-list overflow-hidden transition-all duration-500 ${servicesDropdown
+                      ? 'max-h-[400px] mt-5'
+                      : 'max-h-0'
+                    }`}
+                >
 
-      <li className="py-3 list-none">
+                  <li className="py-3 list-none">
 
-        <Link
-          to="/services/digital-marketing"
-          className="text-white/80 hover:text-white text-[16px] md:text-[18px]"
-        >
-          Digital Marketing
-        </Link>
+                    <Link
+                      to="/digital-marketing"
+                      className="text-white/80 hover:text-white text-[16px] md:text-[18px]"
+                    >
+                      Digital Marketing
+                    </Link>
 
-      </li>
+                  </li>
 
-      <li className="py-3 list-none">
+                  <li className="py-3 list-none">
 
-        <Link
-          to="/services/creative-services"
-          className="text-white/80 hover:text-white text-[16px] md:text-[18px]"
-        >
-          Creative Services
-        </Link>
+                    <Link
+                      to="/creative-services"
+                      className="text-white/80 hover:text-white text-[16px] md:text-[18px]"
+                    >
+                      Creative Services
+                    </Link>
 
-      </li>
+                  </li>
 
-      <li className="py-3 list-none">
+                  <li className="py-3 list-none">
 
-        <Link
-          to="/services/web-tech"
-          className="text-white/80 hover:text-white text-[16px] md:text-[18px]"
-        >
-          Web & Tech
-        </Link>
+                    <Link
+                      to="/web-tech"
+                      className="text-white/80 hover:text-white text-[16px] md:text-[18px]"
+                    >
+                      Web & Tech
+                    </Link>
 
-      </li>
+                  </li>
 
-    </ul>
+                </ul>
 
-  </li>
+              </li>
 
-  {/* CLIENTS */}
+              {/* CLIENTS */}
 
-  <li className="main-menu-list-item list-none">
+              <li className="main-menu-list-item list-none">
 
-    <Link
-      to="/clients"
-      className="main-menu-link text-white text-[20px] md:text-[26px] xl:text-[32px] font-bold hover:translate-x-3 transition-all duration-300 inline-block"
-    >
-      CLIENTS
-    </Link>
+                <Link
+                  to="/clients"
+                  className="main-menu-link text-white text-[20px] md:text-[26px] xl:text-[32px] font-bold hover:translate-x-3 transition-all duration-300 inline-block"
+                >
+                  CLIENTS
+                </Link>
 
-  </li>
+              </li>
 
-  {/* NEWS & MEDIA */}
+              {/* NEWS */}
 
-  <li className="main-menu-list-item list-none">
+              <li className="main-menu-list-item list-none">
 
-    <Link
-      to="/news-media"
-      className="main-menu-link text-white text-[20px] md:text-[26px] xl:text-[32px] font-bold hover:translate-x-3 transition-all duration-300 inline-block"
-    >
-      NEWS & MEDIA
-    </Link>
+                <Link
+                  to="/news-media"
+                  className="main-menu-link text-white text-[20px] md:text-[26px] xl:text-[32px] font-bold hover:translate-x-3 transition-all duration-300 inline-block"
+                >
+                  NEWS & MEDIA
+                </Link>
 
-  </li>
+              </li>
 
-  {/* BLOG */}
+              {/* BLOG */}
 
-  <li className="main-menu-list-item list-none">
+              <li className="main-menu-list-item list-none">
 
-    <Link
-      to="/blog"
-      className="main-menu-link text-white text-[20px] md:text-[26px] xl:text-[32px] font-bold hover:translate-x-3 transition-all duration-300 inline-block"
-    >
-      BLOG
-    </Link>
+                <Link
+                  to="/blog"
+                  className="main-menu-link text-white text-[20px] md:text-[26px] xl:text-[32px] font-bold hover:translate-x-3 transition-all duration-300 inline-block"
+                >
+                  BLOG
+                </Link>
 
-  </li>
+              </li>
 
-  {/* REACH US */}
+              {/* REACH US */}
 
-  <li className="main-menu-list-item list-none">
+              <li className="main-menu-list-item list-none">
 
-    <button
-      onClick={() => setReachDropdown(!reachDropdown)}
-      className="main-menu-dropdown-button flex items-center gap-4"
-    >
+                <button
+                  onClick={() =>
+                    setReachDropdown(!reachDropdown)
+                  }
+                  className="main-menu-dropdown-button flex items-center gap-4"
+                >
 
-      <span className="main-menu-link text-white text-[20px] md:text-[26px] xl:text-[32px] font-bold">
+                  <span className="main-menu-link text-white text-[20px] md:text-[26px] xl:text-[32px] font-bold">
 
-        REACH US
+                    REACH US
 
-      </span>
+                  </span>
 
-      <FaAngleDown
-        className={`text-white transition-all duration-300 ${
-          reachDropdown ? 'rotate-180' : ''
-        }`}
-      />
+                </button>
 
-    </button>
+                {/* DROPDOWN */}
 
-    {/* DROPDOWN */}
+                <ul
+                  className={`main-menu-dropdown-list overflow-hidden transition-all duration-500 ${reachDropdown
+                      ? 'max-h-[400px] mt-5'
+                      : 'max-h-0'
+                    }`}
+                >
 
-    <ul
-      className={`main-menu-dropdown-list overflow-hidden transition-all duration-500 ${
-        reachDropdown
-          ? 'max-h-[400px] mt-5'
-          : 'max-h-0'
-      }`}
-    >
+                  <li className="py-3 list-none">
 
-      <li className="py-3 list-none">
+                    <Link
+                      to="/contact-us"
+                      className="text-white/80 hover:text-white text-[16px] md:text-[18px]"
+                    >
+                      Contact Us
+                    </Link>
 
-        <Link
-          to="/contact-us"
-          className="text-white/80 hover:text-white text-[16px] md:text-[18px]"
-        >
-          Contact Us
-        </Link>
+                  </li>
 
-      </li>
+                  <li className="py-3 list-none">
 
-      <li className="py-3 list-none">
+                    <Link
+                      to="/careers"
+                      className="text-white/80 hover:text-white text-[16px] md:text-[18px]"
+                    >
+                      Careers
+                    </Link>
 
-        <Link
-          to="/careers"
-          className="text-white/80 hover:text-white text-[16px] md:text-[18px]"
-        >
-          Careers
-        </Link>
+                  </li>
 
-      </li>
+                </ul>
 
-  
+              </li>
 
-    </ul>
-
-  </li>
-
-</ul>
+            </ul>
 
           </div>
 

@@ -5,22 +5,25 @@ function SectionLabel({
   text,
   textColor = '#17181a',
   lineColor = '#ab0418',
+  className = '',
 }) {
 
   return (
 
-    <div className="flex items-center gap-4 mb-8">
+    <div className={`flex items-center gap-4 mb-8 ${className}`}>
 
-      <h5
-        className="
-          text-[16px]
-          md:text-[20px]
-          font-bold
-        "
-        style={{ color: textColor }}
-      >
-        {text}
-      </h5>
+      {text && (
+        <h5
+          className="
+            text-[16px]
+            md:text-[20px]
+            font-bold
+          "
+          style={{ color: textColor }}
+        >
+          {text}
+        </h5>
+      )}
 
       <div
         className="

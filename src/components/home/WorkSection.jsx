@@ -6,9 +6,9 @@ import React, {
     useState,
   } from 'react'
   
-  import {
-    FaArrowRight,
-  } from 'react-icons/fa'
+
+
+  import { FaArrowUp } from "react-icons/fa";
   
   /* ====================================
       LIGHT GALLERY
@@ -701,56 +701,92 @@ import React, {
   
               <div>
   
-                <button
-                  className="
-                    group
-                    w-[150px]
-                    h-[150px]
-                    rounded-full
-                    border
-                    border-[#d9d9d9]
-                    flex
-                    flex-col
-                    items-center
-                    justify-center
-                    gap-3
-                    text-[#17181a]
-                    hover:bg-[#ab0418]
-                    hover:border-[#ab0418]
-                    hover:text-white
-                    transition-all
-                    duration-500
-                  "
-                >
-  
-                  <FaArrowRight
-                    className="
-                      group-hover:translate-x-1
-                      group-hover:-translate-y-1
-                      transition-all
-                      duration-300
-                    "
-                  />
-  
-                  <span
-                    className="
-                      text-[18px]
-                      font-semibold
-                      leading-[1.3]
-                    "
-                  >
-  
-                    Explore
-  
-                    <span className="block">
-  
-                      More
-  
-                    </span>
-  
-                  </span>
-  
-                </button>
+          
+
+<button
+  className="
+    group
+    relative
+    w-[150px]
+    h-[150px]
+    rounded-full
+    border
+    border-[#d9d9d9]
+    overflow-hidden
+    hover:scale-105
+    transition-all
+    duration-500
+  "
+>
+
+  {/* HOVER BG */}
+
+  <div
+    className="
+      absolute
+      inset-0
+      bg-[#ab0418]
+      rounded-full
+      scale-0
+      group-hover:scale-100
+      transition-all
+      duration-500
+    "
+  />
+
+  {/* CONTENT */}
+
+  <div
+    className="
+      relative
+      z-10
+      flex
+      flex-col
+      items-center
+      justify-center
+      h-full
+      text-[#17181a]
+      group-hover:text-white
+      transition-all
+      duration-500
+    "
+  >
+
+    <FaArrowUp
+      className="
+        text-current
+        text-[20px]
+        rotate-45
+        mb-3
+        group-hover:-translate-y-1
+        transition-all
+        duration-300
+      "
+    />
+
+    <span
+      className="
+        text-[18px]
+        font-semibold
+        leading-[1.3]
+        text-center
+        text-current
+      "
+    >
+
+      Explore
+
+      <span className="block">
+
+        More
+
+      </span>
+
+    </span>
+
+  </div>
+
+</button>
   
               </div>
   

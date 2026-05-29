@@ -4,6 +4,7 @@ import React from 'react'
 
 import LayoutWrapper from '../common/LayoutWrapper'
 import SectionLabel from '../common/SectionLabel'
+import { FaArrowUp } from "react-icons/fa";
 
 import {
   FaFacebookF,
@@ -62,73 +63,65 @@ function ContactTalkSection() {
 
                 </p>
 
-                {/* ====================================
-                    SOCIAL WRAPPER
-                ==================================== */}
+             {/* ====================================
+    SOCIAL WRAPPER
+==================================== */}
 
-                <div className="contact-talk-social-wrapper flex flex-wrap items-center justify-center xl:justify-start gap-6">
+<div className="contact-talk-social-wrapper flex flex-wrap items-center justify-center xl:justify-start gap-6">
 
-                  {/* LABEL */}
+  {/* LABEL + ARROW */}
 
-                  <div className="contact-talk-social-label-wrapper flex items-center gap-4">
+  <div className="contact-talk-social-label-wrapper flex items-center gap-5">
 
-                    <h5 className="contact-talk-social-label text-[24px] mb-4 font-semibold text-[#17181a] whitespace-nowrap">
+    <h5 className="contact-talk-social-label text-[24px] font-semibold text-[#17181a] leading-none whitespace-nowrap">
 
-                      Connect Us
+      Connect Us
 
-                    </h5>
+    </h5>
 
-          <SectionLabel
-  textColor="#000"
-  lineColor="#ab0418"
-  className="mb-4"
-/>
+    <SectionLabel
+      textColor="#000"
+      lineColor="#ab0418"
+      className="!mb-0 relative top-[2px]"
+    />
 
-                  </div>
+  </div>
 
-                  {/* ICONS */}
+  {/* ICONS */}
 
-                  <div className="contact-talk-social-icons flex items-center gap-3">
+  <div className="contact-talk-social-icons flex items-center gap-3">
 
-                    <a
-                      href="#"
-                      className="contact-talk-social-icon w-[46px] h-[46px] rounded-full border border-[#d9d9d9] flex items-center justify-center text-[#17181a] hover:bg-[#ab0418] hover:text-white hover:border-[#ab0418] transition-all duration-500"
-                    >
+    <a
+      href="#"
+      className="contact-talk-social-icon w-[46px] h-[46px] rounded-full border border-[#d9d9d9] flex items-center justify-center text-[#17181a] text-[16px] hover:bg-[#ab0418] hover:text-white hover:border-[#ab0418] transition-all duration-500"
+    >
+      <FaFacebookF />
+    </a>
 
-                      <FaFacebookF />
+    <a
+      href="#"
+      className="contact-talk-social-icon w-[46px] h-[46px] rounded-full border border-[#d9d9d9] flex items-center justify-center text-[#17181a] text-[16px] hover:bg-[#ab0418] hover:text-white hover:border-[#ab0418] transition-all duration-500"
+    >
+      <FaXTwitter />
+    </a>
 
-                    </a>
+    <a
+      href="#"
+      className="contact-talk-social-icon w-[46px] h-[46px] rounded-full border border-[#d9d9d9] flex items-center justify-center text-[#17181a] text-[16px] hover:bg-[#ab0418] hover:text-white hover:border-[#ab0418] transition-all duration-500"
+    >
+      <FaLinkedinIn />
+    </a>
 
-                    <a
-                      href="#"
-                      className="contact-talk-social-icon w-[46px] h-[46px] rounded-full border border-[#d9d9d9] flex items-center justify-center text-[#17181a] hover:bg-[#ab0418] hover:text-white hover:border-[#ab0418] transition-all duration-500"
-                    >
+    <a
+      href="#"
+      className="contact-talk-social-icon w-[46px] h-[46px] rounded-full border border-[#d9d9d9] flex items-center justify-center text-[#17181a] text-[16px] hover:bg-[#ab0418] hover:text-white hover:border-[#ab0418] transition-all duration-500"
+    >
+      <FaInstagram />
+    </a>
 
-                      <FaXTwitter />
+  </div>
 
-                    </a>
-
-                    <a
-                      href="#"
-                      className="contact-talk-social-icon w-[46px] h-[46px] rounded-full border border-[#d9d9d9] flex items-center justify-center text-[#17181a] hover:bg-[#ab0418] hover:text-white hover:border-[#ab0418] transition-all duration-500"
-                    >
-
-                      <FaLinkedinIn />
-
-                    </a>
-
-                    <a
-                      href="#"
-                      className="contact-talk-social-icon w-[46px] h-[46px] rounded-full border border-[#d9d9d9] flex items-center justify-center text-[#17181a] hover:bg-[#ab0418] hover:text-white hover:border-[#ab0418] transition-all duration-500"
-                    >
-
-                      <FaInstagram />
-
-                    </a>
-
-                  </div>
-
-                </div>
+</div>
 
               </div>
 
@@ -142,25 +135,82 @@ function ContactTalkSection() {
 
           <div className="contact-talk-right-side flex justify-center xl:justify-end">
 
-            <button className="contact-talk-circle-button w-[190px] h-[190px] rounded-full bg-[#ece8e8] hover:bg-[#ab0418] group transition-all duration-500 flex flex-col items-center justify-center">
+<button
+  className="
+    contact-talk-circle-button
+    group
+    relative
+    w-[150px]
+    h-[150px]
+    rounded-full
+    bg-[#17181a]
+    overflow-hidden
+    hover:scale-105
+    transition-all
+    duration-500
+  "
+>
 
-              <span className="text-[30px] text-[#17181a] group-hover:text-white transition-all duration-500 mb-2">
+  {/* HOVER BG */}
 
-                ↗
+  <div
+    className="
+      absolute
+      inset-0
+      bg-[#ab0418]
+      rounded-full
+      scale-0
+      group-hover:scale-100
+      transition-all
+      duration-500
+    "
+  />
 
-              </span>
+  {/* CONTENT */}
 
-              <span className="text-[18px] md:text-[22px] font-semibold leading-[1.4] text-center text-[#17181a] group-hover:text-white transition-all duration-500">
+  <div
+    className="
+      relative
+      z-10
+      flex
+      flex-col
+      items-center
+      justify-center
+      h-full
+      text-white
+    "
+  >
 
-                Contact
+    <FaArrowUp
+      className="
+        text-[20px]
+        rotate-45
+        mb-3
+        text-current
+        group-hover:-translate-y-1
+        transition-all
+        duration-300
+      "
+    />
 
-                <br />
+    <span
+      className="
+        text-[20px]
+        md:text-[24px]
+        font-bold
+        leading-[1.2]
+        text-center
+        text-current
+      "
+    >
+      Contact
+      <br />
+      Now
+    </span>
 
-                Now
+  </div>
 
-              </span>
-
-            </button>
+</button>
 
           </div>
 

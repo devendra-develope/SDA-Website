@@ -3,11 +3,11 @@
 import React from 'react'
 
 import LayoutWrapper from '../common/LayoutWrapper'
-
+import whiteLogo from '../../assets/spicetree_white_logo.webp'
 import {
   FaPaperPlane,
 } from 'react-icons/fa6'
-
+import { Link } from 'react-router-dom'
 function Footer() {
 
   return (
@@ -306,17 +306,21 @@ function Footer() {
 
             <div>
 
-              <h2 className="text-white text-[58px] font-bold leading-none mb-3">
+           <Link to="/">
+            <img
+              src={whiteLogo}
+              alt="White Logo"
+              className="main-menu-white-logo w-[150px] md:w-[190px] object-contain"
+            />
+          </Link>
 
-                spice<span className="text-[#ab0418]">tree</span>
+       <p className=" mt-8 text-[#8d8d8d] text-[16px] md:text-[18px] leading-[1.9] max-w-[320px]">
 
-              </h2>
+    At Spicetree Digital Agency, “Growth for All, Above All” isn’t just a line,
+    it’s the soul of our existence. It defines how we think, how we create,
+    how we collaborate, and how we help brands rise.
 
-              <p className="text-[#8d8d8d] text-[20px]">
-
-                Digital Agency
-
-              </p>
+  </p>
 
             </div>
 

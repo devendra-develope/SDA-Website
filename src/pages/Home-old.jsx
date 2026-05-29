@@ -20,9 +20,10 @@ function Home() {
       <Hero />
       <AboutSection/>
       <ServicesSection/>
+      <ClientLogoSlider/>
       <WorkSection/>
-     <StrategySection/>
-     <ClientLogoSlider/>
+     {/* <StrategySection/> */}
+     
      <TestimonialSection/>
      <ContactTalkSection/>
      <Footer/>
