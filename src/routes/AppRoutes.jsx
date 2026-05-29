@@ -13,7 +13,7 @@ import {
 
 import Home from '../pages/Home'
 
-import AboutUs from '../pages/AboutUs'
+import AboutUs from '../pages/Aboutus'
 
 import ContactUs from '../pages/ContactUs'
 
@@ -34,7 +34,7 @@ function AppRoutes() {
 
       <Route
         path="/about-us"
-        element={<AboutUs />}
+        element={<Aboutus />}
       />
 
       {/* CONTACT */}
